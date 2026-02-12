@@ -47,7 +47,7 @@ impl Module for IOStat {
         .expect("parsed CSS");
         style_context.add_class("cffi-iostat");
 
-        let label = Label::new(Some("[Calculating disk I/O stats...]"));
+        let label = Label::new(Some("     0.000 MiB/s read      0.000 MiB/s write"));
         label.set_margin_start(10);
         label.set_margin_end(10);
         container.add(&label);
