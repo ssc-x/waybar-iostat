@@ -1,39 +1,7 @@
 # waybar-iostat
 
-`iostat` widget for [Waybar](https://github.com/Alexays/Waybar).
+Like [many](https://blog.joergi.io/posts/2025-09-20-migrate-from-github-to-codeberg/) [other](https://www.patreon.com/sysvinit/posts/migrating-from-138299630) [great open source projects](https://ziglang.org/news/migrating-from-github-to-codeberg/), this one has [moved to Codeberg](https://codeberg.org/ssc/waybar-iostat).
 
-<img src="https://raw.githubusercontent.com/ssc-x/waybar-iostat/master/assets/preview.gif" width="384" height="64" alt="preview" />
+Software — and especially so in the AI era — is less about who can build the next (insert superlative) thing, and more about your values and ideals. Just as much as it's about what it _is_, it's about what it _stands for_. Read that again. And my values and ideals do not include rampant disregard for sustainability or the common good.
 
-Developed and tested on [Hyprland](https://github.com/hyprwm/Hyprland).
-
-# Installation
-
-1. Run `cargo build --release`
-2. Copy `target/release/libwaybar_iostat.so` wherever you want. Even the Waybar config dir is fine.
-3. Add the module to your `config.jsonc`, e.g.
-
-```jsonc
-{
-  // ...
-  "modules-right": [
-    // ...
-    "cffi/iostat",
-    // ...
-  ],
-  // ...
-  "cffi/iostat": {
-    "module_path": "/wherever/you/put/libwaybar_iostat.so",
-    "interval": 1.5, // refresh interval in seconds - optional (default 1.0)
-  },
-  // ...
-}
-```
-
-4. Run `killall -USR2 waybar` to restart Waybar.
-5. Enjoy!
-
-# Configuration
-
-This widget can be styled using Waybar's `style.css`.
-
-The base class is `.cffi-iostat`. When the disk throughput exceeds certain hardcoded thresholds, one of `.cffi-iostat-warning` or `.cffi-iostat-critical` is added as well.
+Since this is such a tiny project, I've got the luxury of just "moving everything over". However, even if your project is so big that it feels scary or impossible to migrate to a different platform — remember, it's only impossible until you've done it. The sooner you escape the vendor lock-in, the easier it is to do so. Join us today!
